@@ -14,7 +14,7 @@
 
 <body>
 	<header class="page-header">
-		<img src="img/name_logo.svg" alt="logo" class="page-header__item">
+		<img src="img/name_logo.svg" alt="logo" class="navigation-logo page-header__item">
 		<nav class="main-navigation page-header__item">
 			<ul role="menubar" class="navigation-list">
 				<li role="presentation">
@@ -36,23 +36,24 @@
 	<main> 
 		<div class="contact">
 			<h1>Contact</h1>
-				Aurora, CO  80010<br>
-				United States<br>
-				Skype:<br><a href="skype:live:joshuamou">live:joshuamou</a><br>
-				Email:<br><a href="mailto:joshuamou@hotmail.com">joshuamou@hotmail.com</a><br>
+				Joshua Mouton<br>
+				1917 Newark St.<br>
+				Aurora, CO  80010<br><br>
 
-			<a href="mailto:joshuamou@hotmail.com">Contact me by email</a><br><br>
+			<a href="mailto:joshuamou@hotmail.com">Contact me by email</a><br>
+
 			<h3>Send Message:</h3>
 
-			<form action="#" method="post" id="contact-form">
-				<label class="standard-label" for="contact-email">Email: </label><br>
-				<input type="email" id="contact-email" placeholder="email@email.com" required><br>
+			<form action="https://formspree.io/f/xvodprol" method="post" id="contact-form">
+				<label class="standard-label" for="your-name">Name * </label><br>
+				<input type="text" name="name" id="your-name" placeholder="Your name"><br>
 
-				<label class="standard-label" for="telephone-number">Telephone: </label><br>
-				<input type="tel" id="telephone-number" placeholder="555-555-5555" pattern="\d{3}[\-]\d{3}[\-]\d{4}"><br>
+				<label class="standard-label" for="contact-email">Email * </label><br>
+				<input type="email" name="email" id="contact-email" placeholder="Your email" required><br>
+				<input type="hidden" name="_subject" value="New message">
 
-				<label class="standard-label" for="message">Message: </label><br>
-				<textarea maxlength="240" required></textarea><br>
+				<label class="standard-label" for="message">Message * </label><br>
+				<textarea maxlength="240" name="message" rows="4" cols="30" placeholder="Your message" required></textarea><br>
 				<input type="submit" id="message" value="Send message"><br>
 			</form>
 		</div>
