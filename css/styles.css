@@ -53,6 +53,7 @@ a:active {
   color: var(--active-color);
 }
 
+/* -------------------- Header -------------------- */
 .page-header {
   display: flex;
   padding: 20px;
