@@ -13,11 +13,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-normal);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 150%;
   background-color: var(--background-color);
 }
 
@@ -53,28 +57,21 @@ a:active {
   color: var(--active-color);
 }
 
-/* -------------------- Header -------------------- */
+/* ----------------------- Header ----------------------- */
 .page-header {
   display: flex;
-  padding: 5px;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
   width: 95%;
-  max-width: 1200px;
-  flex-wrap: wrap;
-  text-align: center;
+  max-width: 1024px;
   background-color: var(--background-color);
-  margin: 10px auto;
+  margin: 0 auto;
   border-bottom: 1px outset rgb(203, 203, 203);
 }
 
-.page-header__item {
-  flex: 0 1 200px;
-  text-align: center;
-}
-
 .page-header__item:last-child {
-  flex-grow: 1;
+  flex-grow: 2;
   text-align: right;
 }
 
@@ -91,20 +88,21 @@ a:active {
   text-decoration: none;
 }
 
+/* ----------------------  Profile Section ------------------ */
+
 .profile {
   display: flex;
   flex-wrap: wrap;
   flex: auto;
   width: 85%;
-  max-width: 800px;
+  max-width: 1024px;
+  justify-content: center;
   margin: 25px auto;
-
 }
 
 .profile__portrait {
-  width: 225px;
-  margin-top: 22px;
-  margin-right: 40px;
+  width: 250px;
+  margin: 15px 50px 15px 10px;
   border-radius: 50%;
   box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
   transition: all ease-in-out 0.2s;
@@ -112,6 +110,11 @@ a:active {
 
 .profile__portrait:hover {
   box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.profile__item {
+  margin: 40px 10px 15px 10px;
+  padding: 15px;
 }
 
 .web-text {
@@ -123,26 +126,57 @@ a:active {
   font-size: 18px;
 }
 
+/* ------------------- About Section ----------------------- */
 .about {
   display: flex;
   flex-wrap: wrap;
+  flex: auto;
   justify-content: center;
   width: 85%;
-  max-width: 800px;
-  margin: 25px auto;
+  max-width: 1024px;
+  margin: 0 auto;
   border-top: 1px outset rgb(203, 203, 203);
 }
 
 .about__item {
   flex-basis: 100%;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
-  max-width: 375px;
+  max-width: 45%;
+  text-align: center;
 }
 
+/* ---------------- Work Section -------------------- */
 .work {
   text-align: center;
-  margin: auto;
+  margin: 15px auto;
+}
+
+/* start grid fallback */
+.project-list__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* end grid fallback */
+
+@supports (display: grid) {
+  .project-list {
+    display: inline-grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-gap: 2rem;
+    margin: 15px 25px;
+    justify-content: center;
+  }
+
+  .project-list__item {
+    background-color: rgb(232, 232, 232);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 10px 25px;
+    border: 1px solid var(--border-color);
+  }
 }
 
 .contact {
@@ -151,52 +185,7 @@ a:active {
   margin: auto;
 }
 
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
+/* -------------- Buttons ----------------- */
 button,
 .button {
   background-color: var(--link-color);
@@ -221,11 +210,13 @@ button:focus,
   opacity: 0.8;
 }
 
+/* ---------------- Footer -------------- */
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 15px auto 30px;
 }
 
 .social-media__anchor,
@@ -235,58 +226,19 @@ button:focus,
   color: var(--background-color);
 }
 
-/* start grid fallback */
-.project-list__item {
-  display: inline-block;
-  width: 33%;
-}
-
-/* end grid fallback */
-
-@supports (display: grid) {
-  .project-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0 50px;
-  }
-
-  .project-list__item {
-    background-color: rgba(255, 255, 255, 0.509);
-    width: auto;
-    min-height: auto;
-    margin: 0;
-    padding: 1px;
-    border: 1px solid var(--border-color);
-  }
-}
-
+/* ---------------- Media Queries ------------ */
 @media all and (max-width: 500px) {
   .project-list {
     grid-template-columns: 1fr;
   }
 
   .page-header {
-    display: flex;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    width: 95%;
-    flex-wrap: wrap;
-    align-content: center;
-    background-color: var(--background-color);
-    margin: 0 auto;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .page-header__item {
-    flex: 1 1 150px;
-    text-align: center;
+    justify-content: center;
   }
 
   .page-header__item:last-child {
-    flex-grow: 1;
     text-align: center;
+    margin-right: 40px;
   }
 
   .navigation-list {
@@ -300,20 +252,51 @@ button:focus,
   .navigation-list__item--active {
     text-decoration: none;
   }
-}
 
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .project-list {
-    grid-template-columns: 1fr 1fr;
+  .profile__portrait {
+    margin: 5px;
+  }
+
+  .profile__item {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .about {
+    width: 95%;
+    margin: 10px;
   }
 }
 
-@media all and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 768px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__item {
+    max-width: 85%;
+  }
+}
+
+@media all and (max-width: 768px) {
   .project-list {
     grid-gap: 10px;
   }
 
+  .profile__portrait {
+    margin: 5px;
+  }
+
+  .profile__item {
+    margin: 10px;
+    padding: 10px;
+  }
+
   h1 {
     font-size: 22px;
+  }
+
+  .about__item {
+    max-width: 85%;
   }
 }
