@@ -119,11 +119,17 @@ a:active {
 
 .web-text {
   display: inline-block;
-  padding: 3px;
   margin: 0;
   background-color: rgb(78, 20, 87);
   color: white;
   font-size: 18px;
+}
+
+#home::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
 }
 
 /* ------------------- About Section ----------------------- */
@@ -134,7 +140,7 @@ a:active {
   justify-content: center;
   width: 85%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 15px auto;
   border-top: 1px solid rgb(203, 203, 203);
   border-bottom: 1px solid rgb(203, 203, 203);
 }
@@ -164,7 +170,7 @@ a:active {
 @supports (display: grid) {
   .project-list {
     display: inline-grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 24% 24% 24%;
     grid-gap: 2rem;
     margin: 15px 25px;
     justify-content: center;
@@ -180,16 +186,43 @@ a:active {
   }
 }
 
+#work::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
 /* ----------------- Contact Page ------------ */
 
 .contact {
   text-align: center;
   max-width: 1024px;
-  margin: 30px auto;
+  margin: 15px auto;
+  border-top: 1px solid rgb(203, 203, 203);
 }
 
-.contact-form {
-  border-radius: 7px;
+#contact::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
+}
+
+/* ---------------- Footer -------------- */
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px auto 30px;
+}
+
+.social-media__anchor,
+.social-media__anchor:hover,
+.social-media__anchor:visited,
+.social-media__anchor:active {
+  color: var(--background-color);
 }
 
 /* -------------- Buttons ----------------- */
@@ -215,22 +248,6 @@ button:focus,
 .button:focus {
   cursor: pointer;
   opacity: 0.8;
-}
-
-/* ---------------- Footer -------------- */
-.page-footer {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 15px auto 30px;
-}
-
-.social-media__anchor,
-.social-media__anchor:hover,
-.social-media__anchor:visited,
-.social-media__anchor:active {
-  color: var(--background-color);
 }
 
 /* ---------------- Media Queries ------------ */
@@ -297,6 +314,7 @@ button:focus,
   .profile__item {
     margin: 10px;
     padding: 10px;
+    text-align: center;
   }
 
   h1 {
