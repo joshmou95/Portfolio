@@ -20,22 +20,22 @@
 		<nav class="main-navigation page-header__item">
 			<ul role="menubar" class="navigation-list">
 				<li role="presentation">
-					<a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+					<a href="#home" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
 				</li>
 				<!-- <li role="presentation">
           <a href="#about" role="menuitem" class="navigation-list__item">About</a>
         </li> -->
-				<!-- <li role="presentation">
-          <a href="#work" role="menuitem" class="navigation-list__item">Work</a>
-        </li> -->
 				<li role="presentation">
-					<a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+          <a href="#work" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+				<li role="presentation">
+					<a href="#contact" role="menuitem" class="navigation-list__item">Contact</a>
 				</li>
 			</ul>
 		</nav>  
 	</header>
 
-	<main>
+	<main id="home">
 		<section class="profile">
 			<!--Main content of page, image, welcome text, call to action-->
 			<img src="img/portrait.jpg" class="profile__portrait" alt="A photograph of me">
@@ -70,25 +70,25 @@
         <div class="project-list__item">
           <h2>Simple Javascript App</h2>
           <p>
-            Web application that loads data from an external API<br>
+            Web application that loads data from an external API using HTML, CSS, and Javascript.<br>
             <a href="https://joshmou95.github.io/simple-javascript-app/" target="_blank">Link to Project 1</a>
           </p>
         </div>
         <div class="project-list__item">
           <h2>To Do List App</h2>
           <p>
-            To Do List App using JQuery with the ability to add, crossout, reorder, and delete items<br>
+            To Do List App using JQuery with the ability to add, crossout, reorder, and delete items.<br>
             <a href="https://joshmou95.github.io/to-do-list-app/" target="_blank">Link to Project 2</a>
           </p>
         </div>
         <div class="project-list__item">
-          <h2>Project 3</h2>
+          <h2>Rest API</h2>
           <p>
-            Description of Project 3<br>
-            <a href="#">Link to Project 3</a>
+            RESTful API using the Node.js, Express, and Mongoose with CRUD functionalities. <br>
+            <a href="https://github.com/joshmou95/movie_api">Link to Project 3</a>
           </p>
         </div>
-        <div class="project-list__item">
+        <!-- <div class="project-list__item">
           <h2>Project 4</h2>
           <p>
             Description of Project 4<br>
@@ -108,10 +108,13 @@
             Description of Project 6<br>
             <a href="#">Link to Project 6</a>
           </p>
-        </div>
+        </div> -->
       </div>
-    </section>  
-
+		</section>
+		<section id="contact" class="contact">
+			<h1>Contact</h1>
+			<a href="mailto:joshuamou@hotmail.com?subject=Web%20Development%20Opportunities"><h3>Contact me by email</h3></a><br>
+		</section>
 
 	</main>
 
