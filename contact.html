@@ -42,17 +42,17 @@
 
 			<h3>Send Message:</h3>
 
-			<form action="https://formspree.io/f/xvodprol" method="post" class="contact-form">
-				<label class="standard-label" for="your-name">Name * </label><br>
-				<input type="text" name="name" id="your-name" placeholder="Your name"><br>
+			<form onsubmit="return false" class="contact-form">
+				<label class="standard-label" for="yourName">Name * </label><br>
+				<input type="text" name="name" id="yourName" placeholder="Your name"><br>
 
-				<label class="standard-label" for="contact-email">Email * </label><br>
-				<input type="email" name="email" id="contact-email" placeholder="Your email" required><br>
+				<label class="standard-label" for="email">Email * </label><br>
+				<input type="email" name="email" id="email" placeholder="Your email" required><br>
 				<input type="hidden" name="_subject" value="New message">
 
 				<label class="standard-label" for="message">Message * </label><br>
-				<textarea maxlength="240" name="message" rows="4" cols="30" placeholder="Your message" required></textarea><br>
-				<input class="button" type="submit" id="message" value="Send message"><br>
+				<textarea id="message" maxlength="240" name="message" rows="4" cols="30" placeholder="Your message" required></textarea><br>
+				<button onclick="sendContact();">Send Message</button>
 			</form>
 		</div>
 	</main>
@@ -72,7 +72,7 @@
 		</a>	
 		</div>
 	</footer>
-
+	<script src="js/script.js"></script>
 </body>
 
 </html>
