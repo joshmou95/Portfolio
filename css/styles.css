@@ -20,7 +20,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-normal);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
   background-color: var(--background-color);
 }
@@ -36,7 +36,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: var(--font-bold);
 }
 
@@ -64,7 +64,7 @@ a:active {
   position: sticky;
   top: 0;
   width: 95%;
-  max-width: 1024px;
+  max-width: 1200px;
   background-color: var(--background-color);
   margin: 0 auto;
   border-bottom: 1px outset rgb(203, 203, 203);
@@ -95,13 +95,13 @@ a:active {
   flex-wrap: wrap;
   flex: auto;
   width: 85%;
-  max-width: 1024px;
+  max-width: 1200px;
   justify-content: center;
   margin: 25px auto;
 }
 
 .profile__portrait {
-  width: 250px;
+  width: 20rem;
   margin: 15px 50px 15px 10px;
   border-radius: 50%;
   box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
@@ -139,7 +139,7 @@ a:active {
   flex: auto;
   justify-content: center;
   width: 85%;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 15px auto;
   border-top: 1px solid rgb(203, 203, 203);
   border-bottom: 1px solid rgb(203, 203, 203);
@@ -157,6 +157,7 @@ a:active {
 .work {
   text-align: center;
   margin: 15px auto;
+  max-width: 1200px;
 }
 
 /* start grid fallback */
@@ -197,7 +198,7 @@ a:active {
 
 .contact {
   text-align: center;
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 15px auto;
   border-top: 1px solid rgb(203, 203, 203);
 }
