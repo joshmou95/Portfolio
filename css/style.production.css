@@ -5,13 +5,14 @@
 * Browsers: last 4 version
 */
 
-
 :root {
-  --background-color: #f9f9f9;
-  --border-color: #2b2b2b;
-  --link-color: #357b70;
-  --visited-color: #05676e;
-  --active-color: #489c79;
+  --background-color: #fcfdfe;
+  --main-color: #132779;
+  --text-color: #091a5f;
+  --link-color: #1E3699;
+  --visited-color: #1E3699;
+  --active-color: #fcfdfe;
+  --project-clor: #f1f3fc;
   --font-bold: 700;
   --font-normal: 400;
 }
@@ -28,6 +29,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-normal);
+  color: var(--text-color);
   font-size: 18px;
   line-height: 150%;
   background-color: var(--background-color);
@@ -36,19 +38,23 @@ body {
 h1 {
   font-size: 30px;
   font-weight: var(--font-bold);
+  color: var(--main-color);
 }
 
 h2 {
   font-size: 24px;
   font-weight: var(--font-bold);
+  color: var(--main-color);
 }
 
 h3 {
   font-size: 20px;
   font-weight: var(--font-bold);
+  color: var(--text-color);
 }
 
 a {
+  font-size: 20px;
   color: var(--link-color);
 }
 
@@ -79,7 +85,7 @@ a:active {
   max-width: 1200px;
   background-color: var(--background-color);
   margin: 0 auto;
-  border-bottom: 1px outset rgb(203, 203, 203);
+  border-bottom: 1px outset var(--main-color);;
 }
 
 .page-header__item:last-child {
@@ -113,7 +119,7 @@ a:active {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
-  width: 85%;
+  width: 95%;
   max-width: 1200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -145,8 +151,8 @@ a:active {
 .web-text {
   display: inline-block;
   margin: 0;
-  background-color: rgb(78, 20, 87);
-  color: white;
+  background-color: var(--link-color);
+  color: var(--background-color);
   font-size: 18px;
 }
 
@@ -170,11 +176,11 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 85%;
+  width: 95%;
   max-width: 1200px;
-  margin: 15px auto;
-  border-top: 1px solid rgb(203, 203, 203);
-  border-bottom: 1px solid rgb(203, 203, 203);
+  margin: 10px auto;
+  border-top: 1px solid var(--main-color);;
+  border-bottom: 1px solid var(--main-color);;
 }
 
 .about__item {
@@ -191,6 +197,7 @@ a:active {
   text-align: center;
   margin: 15px auto;
   max-width: 1200px;
+  padding-bottom: 15px;
 }
 
 /* start grid fallback */
@@ -215,12 +222,12 @@ a:active {
   }
 
   .project-list__item {
-    background-color: rgb(232, 232, 232);
+    background-color: var(--project-clor);
     width: auto;
     min-height: auto;
     margin: 0;
     padding: 10px 25px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--main-color);;
   }
 }
 
@@ -235,9 +242,11 @@ a:active {
 
 .contact {
   text-align: center;
+  width: 95%;
   max-width: 1200px;
-  margin: 15px auto;
-  border-top: 1px solid rgb(203, 203, 203);
+  margin: 10px auto;
+  padding-top: 15px;
+  border-top: 1px solid var(--main-color);;
 }
 
 #contact::before {
@@ -272,7 +281,7 @@ a:active {
 button,
 .button {
   background-color: var(--link-color);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--main-color);;
   font-family: inherit;
   color: #fff;
   padding: 10px;
@@ -296,7 +305,7 @@ button:focus,
 }
 
 /* ---------------- Media Queries ------------ */
-@media all and (max-width: 500px) {
+@media all and (max-width: 576px) {
   .project-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -306,6 +315,7 @@ button:focus,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 10px;
   }
 
   .page-header__item:last-child {
@@ -340,7 +350,7 @@ button:focus,
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 768px) {
+@media all and (min-width: 576px) and (max-width: 768px) {
   .project-list {
     -ms-grid-columns: 1fr 2rem 1fr;
     grid-template-columns: 1fr 1fr;
