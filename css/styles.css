@@ -104,6 +104,7 @@ a:active {
   max-width: 1200px;
   justify-content: center;
   margin: 25px auto;
+  padding: 3rem 1rem;
 }
 
 .profile__portrait {
@@ -149,6 +150,7 @@ a:active {
   margin: 10px auto;
   border-top: 1px solid var(--main-color);;
   border-bottom: 1px solid var(--main-color);;
+  padding: 3rem 1rem;
 }
 
 .about__item {
@@ -164,7 +166,8 @@ a:active {
   text-align: center;
   margin: 15px auto;
   max-width: 1200px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
+  padding: 3rem 1rem;
 }
 
 /* start grid fallback */
@@ -208,7 +211,8 @@ a:active {
   width: 95%;
   max-width: 1200px;
   margin: 10px auto;
-  padding-top: 15px;
+  /* padding-top: 15px; */
+  padding: 3rem 1rem;
   border-top: 1px solid var(--main-color);;
 }
 
