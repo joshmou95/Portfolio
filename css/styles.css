@@ -187,9 +187,9 @@ a:active {
 
 @supports (display: grid) {
   .project-list {
-    display: inline-grid;
-    grid-template-columns: 24% 24% 24%;
-    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    grid-gap: 1rem;
     margin: 15px 25px;
     justify-content: center;
   }
@@ -202,6 +202,10 @@ a:active {
     padding: 10px 25px;
     border: 1px solid var(--main-color);;
   }
+}
+
+.project-1 {
+  background-color: #091a5f;
 }
 
 #work::before {
@@ -314,7 +318,7 @@ button:focus,
   }
 }
 
-@media all and (min-width: 576px) and (max-width: 768px) {
+@media all and (min-width: 576px) and (max-width: 1024px) {
   .project-list {
     grid-template-columns: 1fr 1fr;
   }
