@@ -204,9 +204,9 @@ a:active {
   }
 }
 
-.project-1 {
-  background-color: #091a5f;
-}
+/* .project-1 {
+
+} */
 
 #work::before {
   content: "";
