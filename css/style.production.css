@@ -1,7 +1,7 @@
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
 * Browsers: last 4 version
 */
 
@@ -30,7 +30,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: var(--font-normal);
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 150%;
   background-color: var(--background-color);
 }
@@ -78,7 +78,6 @@ a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 95%;
@@ -125,6 +124,18 @@ a:active {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 25px auto;
+  padding: 3rem 1rem;
+  background-image:
+    -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.7))),
+    url('/img/pano.jpg');
+  background-image:
+    -o-linear-gradient(left, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)),
+    url('/img/pano.jpg');
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)),
+    url('/img/pano.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .profile__portrait {
@@ -181,6 +192,7 @@ a:active {
   margin: 10px auto;
   border-top: 1px solid var(--main-color);;
   border-bottom: 1px solid var(--main-color);;
+  padding: 3rem 1rem;
 }
 
 .about__item {
@@ -197,7 +209,7 @@ a:active {
   text-align: center;
   margin: 15px auto;
   max-width: 1200px;
-  padding-bottom: 15px;
+  padding: 3rem 1rem;
 }
 
 /* start grid fallback */
@@ -206,15 +218,21 @@ a:active {
   width: 33%;
 }
 
+.project-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
 /* end grid fallback */
 
 @supports (display: grid) {
   .project-list {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    -ms-grid-columns: 24% 2rem 24% 2rem 24%;
-    grid-template-columns: 24% 24% 24%;
-    grid-gap: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: minmax(10px, 1fr) 1rem minmax(10px, 1fr) 1rem minmax(10px, 1fr);
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    grid-gap: 1rem;
     margin: 15px 25px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -226,10 +244,15 @@ a:active {
     width: auto;
     min-height: auto;
     margin: 0;
-    padding: 10px 25px;
+    padding: 15px 20px;
     border: 1px solid var(--main-color);;
   }
 }
+
+/* .project-3 {
+  background-image: url('/img/meet-app.png');
+  background-size: cover;
+} */
 
 #work::before {
   content: "";
@@ -245,7 +268,8 @@ a:active {
   width: 95%;
   max-width: 1200px;
   margin: 10px auto;
-  padding-top: 15px;
+  /* padding-top: 15px; */
+  padding: 3rem 1rem;
   border-top: 1px solid var(--main-color);;
 }
 
@@ -350,9 +374,9 @@ button:focus,
   }
 }
 
-@media all and (min-width: 576px) and (max-width: 768px) {
+@media all and (min-width: 576px) and (max-width: 1024px) {
   .project-list {
-    -ms-grid-columns: 1fr 2rem 1fr;
+    -ms-grid-columns: 1fr 1rem 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
