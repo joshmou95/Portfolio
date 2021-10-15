@@ -204,8 +204,9 @@ a:active {
   }
 }
 
-/* .project-1 {
-
+/* .project-3 {
+  background-image: url('/img/meet-app.png');
+  background-size: cover;
 } */
 
 #work::before {
