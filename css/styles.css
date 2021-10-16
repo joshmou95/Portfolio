@@ -198,6 +198,7 @@ a:active {
 
 .project-list__text {
   color: var(--background-color);
+  text-decoration: none;
 }
 
 .project-photo {
@@ -442,5 +443,15 @@ button:focus,
 
   .about__item {
     max-width: 85%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile__portrait:hover {
+    box-shadow: 0 10px 13px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1;
   }
 }
