@@ -9,8 +9,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -40,10 +40,8 @@
 		<section class="profile">
 			<!--Main content of page, image, welcome text, call to action-->
 			<img src="img/portrait.jpg" class="profile__portrait" alt="A photograph of me">
-			<div class="profile__item">
-				<h1>Hello!</h1>
+			<div class="profile__text">
 				<p>My name is Joshua Mouton.<br>I am an aspiring  <span class="web-text"> &lt;web&gt;</span>  developer based in Denver, CO.</p>
-				<a href="#work">Check out some of my projects</a><br>
 			</div>
 
 		</section>
@@ -52,15 +50,16 @@
 			<div class="about__item">
 				<h1>About</h1>
 					<p>
-						I am currently studying Full-Stack Web Development program with CareerFoundry and other online resources. 
-					</p>
-					<p>
-						I have a background in the music industy with event production and sound engineering. 
+						I strive to learn and improve everyday, improving skills in life and work. 
+						<br><br>
+						I am studying Full-Stack Web Development with CareerFoundry and other online resources. 
+						<br><br>
+						I am a musician that has a background in the music industy with sound engineering and event production.
 					</p>
 			</div>
 			<div class="about__item">
 				<h1>Skills</h1>
-				<p>HTML, CSS<br>Javascript<br>Node.js<br>React<br>React Native<br>Angular<br>REST API</p>
+				<p>HTML, CSS<br>Javascript<br>Node.js<br>React<br>React Native<br>Angular<br>RESTful API</p>
 			</div>
 			<!-- <a href="#" class="button">Download my CV</a> -->
 		</section>
@@ -70,56 +69,67 @@
       <div class="project-list">
 
 
-			<figure class="project-list__item project-1">
-				<h2>MyFlix Angular App</h2>
-				<a class="project-list__link" href="https://joshmou95.github.io/myFlix-Angular-client/" target="_blank">
-					<img src="/img/angular-app.png" class="project-photo">
-				</a>
-					Client side app for a movie api written in Angular. It was designed using Angular Material and contains comments using Typedoc.
-			</figure>
-
-			<figure class="project-list__item project-2">
-				<h2>Chat App</h2>
-				<a class="project-list__link" href="https://github.com/joshmou95/chat-app/" target="_blank">
-					<img src="/img/chat-app.png" class="project-photo">
-				</a>
-						Mobile chat app written in React Native and developed using Expo. Chats are stored in a google Firestore database and users login using Firebase authentication.
+			<figure class="project-list__item">
+				<h2 class="project-list__text">MyFlix Angular App</h2>
+					<div class="image-container">
+						<img src="/img/angular-app.png" class="project-photo">
+						<a href="https://joshmou95.github.io/myFlix-Angular-client/" target="_blank" class="overlay">
+							<p class="project-text">Client-side Angular app using the RESTful Movie Api. Designed with Angular Material.</p>
+						</a>
+				</div>
 			</figure>
 
 			<figure class="project-list__item">
-				<h2>Meet App</h2>
-				<a class="project-list__link" href="https://joshmou95.github.io/Meet-App/" target="_blank">
-					<img src="/img/meet-app.png" class="project-photo">
-				</a>
-					A serverless, progressive web application with React using a test-driven development technique. The app uses the Google Calendar API to fetch upcoming events.
+				<h2 class="project-list__text">Chat App</h2>
+					<div class="image-container">
+						<img src="/img/chat-app.png" class="project-photo">
+						<a href="https://github.com/joshmou95/chat-app/" target="_blank" class="overlay">
+							<p class="project-text">Mobile chat app written in React Native using Expo. Chats are stored in a google Firestore database and users login using Firebase authentication.</p>
+						</a>
+				</div>
 			</figure>
 
 			<figure class="project-list__item">
-				<h2>MyFlix React App</h2>
-				<a class="project-list__link" href="https://myflixmcu.netlify.app/" target="_blank">
-					<img src="/img/react-app.png" class="project-photo">
-				</a>
-					Client-side single page application built with React, Redux, and bootstrap using the Rest API containing movie data.
+				<h2 class="project-list__text">Meet App</h2>
+					<div class="image-container">
+						<img src="/img/meet-app.png" class="project-photo">
+						<a href="https://joshmou95.github.io/Meet-App/" target="_blank" class="overlay" >
+							<p class="project-text">A serverless, progressive web app with React using a test-driven development technique. It the Google Calendar API to fetch upcoming events.</p>
+						</a>
+				</div>
 			</figure>
 
 			<figure class="project-list__item">
-        <h2>Rest API</h2>
-				<a class="project-list__link" href="https://github.com/joshmou95/movie_api" target="_blank">
-					<img src="/img/movie-api.png" class="project-photo">
-				</a>
-          REST API and database built using JavaScript, Node.js, Express, and MongoDB.
-      </figure>
+				<h2 class="project-list__text">MyFlix React App</h2>
+					<div class="image-container">
+						<img src="/img/react-app.png" class="project-photo">
+						<a href="https://myflixmcu.netlify.app/" target="_blank" class="overlay" >
+							<p class="project-text">Client-side app built with React, Redux, and bootstrap using the RESTful Movie API.</p>
+						</a>
+				</div>
+			</figure>
 
-      <figure class="project-list__item">
-        <h2>Pokedex js App</h2>
-				<a class="project-list__link" href="https://joshmou95.github.io/simple-javascript-app/" target="_blank">
-					<img src="/img/pokedex.png" class="project-photo">
-				</a>
-          A JavaScript app built with HTML, CSS, and JavaScript, which uses an external API.
-				<p>
-          
-        </p>
-      </figure>
+			<figure class="project-list__item">
+				<h2 class="project-list__text">RESTful Movie API</h2>
+					<div class="image-container">
+						<img src="/img/movie-api.png" class="project-photo">
+						<a href="https://github.com/joshmou95/movie_api" target="_blank" class="overlay">
+							<p class="project-text">REST API and database built using JavaScript, Node.js, Express, and MongoDB.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">Pokedex js App</h2>
+					<div class="image-container">
+						<img src="/img/pokedex.png" class="project-photo">
+						<a href="https://joshmou95.github.io/simple-javascript-app/" target="_blank" class="overlay">
+							<p class="project-text">A simple app built with HTML, CSS, and JavaScript which uses an external Pokemon API.</p>
+						</a>
+				</div>
+			</figure>
+
+
 
         <!-- <div class="project-list__item">
           <h2>To Do List App</h2>
@@ -132,8 +142,8 @@
       </div>
 		</section>
 		<section id="contact" class="contact">
-			<h1>Contact</h1>
-			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites"><p>Contact: info@joshuamouton.net</p></a><br>
+			<h1>Contact:</h1>
+			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites"><p> info@joshuamouton.net</p></a><br>
 		</section>
 
 	</main>
