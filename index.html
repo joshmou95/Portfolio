@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.production.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
@@ -41,7 +42,7 @@
 			<!--Main content of page, image, welcome text, call to action-->
 			<img src="img/portrait.jpg" class="profile__portrait" alt="A photograph of me">
 			<div class="profile__text">
-				<p>My name is Joshua Mouton.<br>I am an aspiring  <span class="web-text"> &lt;web&gt;</span>  developer based in Denver, CO.</p>
+				<p>My name is Joshua Mouton.<br>I am an aspiring  <span class="web-text animate__animated animate__bounceIn"> &lt;web&gt;</span>  developer based in Denver, CO.</p>
 			</div>
 
 		</section>
@@ -52,14 +53,65 @@
 					<p>
 						I strive to learn and improve everyday, improving skills in life and work. 
 						<br><br>
-						I am studying Full-Stack Web Development with CareerFoundry and other online resources. 
+						I completed the CareerFoundry Full-Stack Web Development program October 2021. 
 						<br><br>
 						I am a musician that has a background in the music industy with sound engineering and event production.
 					</p>
 			</div>
-			<div class="about__item">
+			<div class="about__item wrapper">
 				<h1>Skills</h1>
-				<p>HTML, CSS<br>Javascript<br>Node.js<br>React<br>React Native<br>Angular<br>RESTful API</p>
+				<div class="skill">
+					<p>HTML</p>
+					<div class="skill-bar skill1 animate__animated animate__slideInLeft">
+						<span class="skill-count">90%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>CSS3</p>
+					<div class="skill-bar skill2 animate__animated animate__slideInLeft">
+							 <span class="skill-count">80%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>JavaScript</p>
+					<div class="skill-bar skill3 animate__animated animate__slideInLeft">
+						<span class="skill-count">75%</span>
+			 </div>
+
+				</div>
+				<div class="skill">
+					<p>Node.js</p>
+					<div class="skill-bar skill4 animate__animated animate__slideInLeft">
+						<span class="skill-count">60%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>React</p>
+					<div class="skill-bar skill5 animate__animated animate__slideInLeft">
+						<span class="skill-count">70%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>Angular</p>
+					<div class="skill-bar skill6 animate__animated animate__slideInLeft">
+						<span class="skill-count">60%</span>
+				</div>
+				</div>
+
+				<!-- <div class="skill">
+					<p>React Native</p>
+					<div class="skill-bar skill7 wow slideInLeft animated">
+						<span class="skill-count">90%</span>
+					</div>
+				</div> -->
+
+
+
+				<!-- <p>HTML, CSS<br>Javascript<br>Node.js<br>React<br>React Native<br>Angular<br>RESTful API</p> -->
 			</div>
 			<!-- <a href="#" class="button">Download my CV</a> -->
 		</section>
@@ -163,7 +215,7 @@
 		</a>	
 		</div>
 	</footer>
-	
+	<script src="js/script.js"></script>
 
 </body>
 
