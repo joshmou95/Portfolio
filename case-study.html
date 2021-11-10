@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Home</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.production.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header class="page-header">
+		<img src="img/name_logo.svg" alt="logo" class="navigation-logo page-header__item">
+		<nav class="main-navigation page-header__item">
+			<ul role="menubar" class="navigation-list">
+				<li role="presentation">
+					<a href="/index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+				</li>
+				<li role="presentation">
+          <a href="#case-study" role="menuitem" class="navigation-list__item">myFlix</a>
+        </li>
+				<li role="presentation">
+					<a href="#contact" role="menuitem" class="navigation-list__item">Contact</a>
+				</li>
+			</ul>
+		</nav>  
+	</header>
+
+	<main id="home">
+
+		<section id="case-study" class="case-study">
+      <div>
+        <h1 class="cs-header">myFlix Project Case Study</h1>
+        <h3>Overview</h3>
+        <p>
+        The purpose of this project was to develop the back-end and front-end for an application called myFlix using the MERN stack (Mongodb, Express, React, and Node). The myFlix app would provide users with information on movies, directors, and genres. Users would also create a profile where they could add or remove movies from their list of favorites. 
+        </p>
+      </div>
+      <img src="/img/myFlix_1.png" class="cs-image-1" alt="myFlix Picture">
+
+      <div class="cs-wrap">
+        <div class="cs-text">
+        <h3>Purpose and Context</h3>
+        <p>
+        This project was part of the web development course from CareerFoundry. It’s purpose was to build upon my skill set as a full stack web developer. 
+        </p>
+        </div>
+        <div class="cs-text">
+        <h3>Objective</h3>
+        <p>
+        The aim was to create the server-side and client-side of an application and have projects I could add to my web developer portfolio. Creating the entirety of the application would demonstrate my understanding of how the front-end and back-end of an application interact. 
+        </p>
+        </div>
+      </div>
+      <div>
+        <h2 class="cs-header">Approach</h2>
+        <h3>Server-Side</h3>
+        <p>
+        I created a RESTful API using Node.js and Express, which interacts with a non-relational database (MongoDB). The API can be accessed with HTTP methods such as GET, POST, PUT, or DELETE. CRUD methods are used to retrieve and store data in the database. The back-end contains two collections in JSON format: one for users and another for movies. 
+        </p>
+        <p>
+        To test the API, I used Postman. Authentication and authorization for the user are also provided in the form of basic HTTP authentication and JWT authentication. Every time a user logs in, a token is generated and stored for future use.
+        </p>
+      </div>
+      <div class="cs-wrap">
+        <img src="/img/postman_2.png" class="cs-image-2" alt="postman image 2">
+        <img src="/img/postman_1.png" class="cs-image-2" alt="postman image 1">
+      </div>
+      <div>
+        <p class="cs-header">
+        <a href="https://github.com/joshmou95/movie_api#readme" target="_blank">API Documentation</a>
+        </p>
+        <p>
+          I created endpoints for retrieving movie details, and updating user information. There were challenges with getting cors to work correctly allowing the user to login. It came down to having cors in the correct place in the code to get it to work. I overcame the issues and understood the project better at the end of it. It was a good feeling when all of my endpoints worked as intended. 
+        </p>
+      </div>
+      <div>
+        <h3>Client-Side</h3>
+        <p>
+          Once the API was working correctly I built the front-end of the application using React and Redux. It is a single page responsive website styled with React Bootstrap. It has several views including login and registration, all movies, single movie, director, and genre views. From the single movie view a user can add a movie to a list of favorites which they can view in the profile view. In the profile view a user can edit their information and remove movies from favorites. 
+        </p>
+      </div>
+      <div class="cs-wrap">
+        <img src="/img/myFlix_2.png" class="cs-image-3" alt="login image">
+        <img src="/img/myFlix_3.png" class="cs-image-4" alt="favorites image">
+      </div>
+      <div>
+        <p>
+          This was my introduction to React and it was a challenge to learn. Implementing all of the required functionality of the application took some time but taught me a great deal as a developer. I had issues with getting the favorites view and profile in the same view. I decided that having them as separate components would work best to avoid the issues I was having. 
+        </p>
+      </div>
+      <div>
+        <h3>Challenges</h3>
+        <p>
+          This application was a lot to take in as a new developer with my first introduction to Node.js and React. I learned a lot about databases and structures and how to work with them. I was able to work out bugs in my code with the help of my tutor and mentor at CareerFoundry. I was stuck at points in learning React and Redux but I used console.log to see where the application was running into issues. It was a great feeling when everything was finally working as it was supposed to and the bugs were squashed. 
+        </p>
+        <h3>Duration</h3>
+        <p>
+          The application development took around two months to complete. The back-end went relatively quickly and took about two weeks to complete. The front-end took about six weeks to complete because of some challenges and doing more research to overcome them. Due to scheduling issues I switched mentors in the program midway through building the client-side portion of this application.
+        </p>
+      </div>
+      <h3 class="cs-header">Application Walk-Through</h3>
+      <img src="/img/myflix_walk.gif" class="cs-image-1" alt="myFlix Gif">
+      <div>
+        <p class="cs-header">
+        <a href="https://myflixmcu.netlify.app/" target="_blank">Application Link</a>
+        <br>
+        <a href="https://github.com/joshmou95/myFlix-client#readme" target="_blank">App Documentation</a>
+        </p>
+        
+        <p>
+          <h3>Credits</h3>
+          Role: Lead Developer<br>
+          Tutor: Shan Gardezi<br>
+          Mentor: Joel David Cross / Jonatan Caraballo
+        </p>
+      </div>
+
+		</section>
+		<section id="contact" class="contact">
+			<h1>Contact:</h1>
+			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites"><p>info@joshuamouton.net</p></a>
+			<br>
+			<a href="/files/Joshua_Mouton_Resume.pdf" download>
+				<button type="button">Download Resume</button>
+			</a>
+
+		</section>
+
+	</main>
+
+	<footer class="page-footer">
+		<!--footer of page, contact section with external links-->
+			<h3>Find me on</h3>
+		<div class="social-media">
+			<a href="https://github.com/joshmou95" class="social-media__anchor" target="_blank">
+				<img src="img/github_icon.svg" alt="Github" class="social-media__item">
+			</a>
+		<a href="https://twitter.com/joshmou95" class="social-media__anchor" target="_blank">
+			<img src="img/twitter_icon.svg" alt="Twitter" class="social-media__item">
+		</a>
+		<a href="https://www.linkedin.com/in/joshuamouton/" class="social-media__anchor" target="_blank">
+			<img src="img/linkedin_icon.svg" alt="LinkedIn" class="social-media__item">
+		</a>	
+		</div>
+	</footer>
+	<!-- <script src="js/script.js"></script> -->
+
+</body>
+
+</html>

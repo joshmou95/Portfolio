@@ -8,9 +8,10 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.production.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -36,84 +37,216 @@
 	</header>
 
 	<main id="home">
+
 		<section class="profile">
 			<!--Main content of page, image, welcome text, call to action-->
 			<img src="img/portrait.jpg" class="profile__portrait" alt="A photograph of me">
-			<div class="profile__item">
-				<h1>Hello!</h1>
-				<h3>My name is Joshua Mouton.<br>I am an aspiring  <span class="web-text"> &lt;web&gt;</span>  developer based in Denver, CO.</h3>
-				
-				<h3><a href="#work">Check out some of my projects</a></h3><br>
+			<div class="profile__text">
+				<p>
+					My name is Joshua Mouton.<br>I am a  <span class="web-text animate__animated animate__bounceIn"> &lt;web&gt;</span>  developer based in Denver, CO.
+					<br>
+				</p>
 			</div>
+
 		</section>
 
 		<section id="about" class="about">
 			<div class="about__item">
 				<h1>About</h1>
-					<h3>
-						I am currently studying Full-Stack Web Development program with CareerFoundry and other online resources. 
-					</h3>
-					<h3>
-						I have a background in the music industy with event production and sound engineering. 
-					</h3>
+					<p>
+						I have a passion for the latest technology and creative problem solving. I want to build applications and websites that focus on clean design and ease of use. 
+					</p>
+					<p>
+						I have a background in event production as a musician, sound engineer, and project manager. I bring a detail-oriented approach to my work. 
+					</p>
+					<p>
+						I am open to freelance, remote, and full time work in web development. 
+					</p>
+
 			</div>
-			<div class="about__item">
+			<div class="about__item wrapper">
 				<h1>Skills</h1>
-				<h3>HTML<br>CSS<br>Javascript<br>Node.js<br>React</h3>
+				<div class="skill">
+					<p>HTML</p>
+					<div class="skill-bar skill1 animate__animated animate__slideInLeft">
+						<span class="skill-count">90%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>CSS3</p>
+					<div class="skill-bar skill2 animate__animated animate__slideInLeft">
+							 <span class="skill-count">80%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>JavaScript</p>
+					<div class="skill-bar skill3 animate__animated animate__slideInLeft">
+						<span class="skill-count">75%</span>
+			 </div>
+
+				</div>
+				<div class="skill">
+					<p>Node.js</p>
+					<div class="skill-bar skill4 animate__animated animate__slideInLeft">
+						<span class="skill-count">60%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>React</p>
+					<div class="skill-bar skill5 animate__animated animate__slideInLeft">
+						<span class="skill-count">70%</span>
+					</div>
+				</div>
+
+				<div class="skill">
+					<p>Angular</p>
+					<div class="skill-bar skill6 animate__animated animate__slideInLeft">
+						<span class="skill-count">60%</span>
+				</div>
+				</div>
+
+				<!-- <div class="skill">
+					<p>React Native</p>
+					<div class="skill-bar skill7 wow slideInLeft animated">
+						<span class="skill-count">90%</span>
+					</div>
+				</div> -->
+
 			</div>
-			<!-- <a href="#" class="button">Download my CV</a> -->
 		</section>
 
 		<section id="work" class="work">
       <h1 class="work-header">Work</h1>
       <div class="project-list">
-        <div class="project-list__item">
-          <h2>Simple Javascript App</h2>
-          <p>
-            Web application that loads data from an external API using HTML, CSS, and Javascript.<br>
-            <a href="https://joshmou95.github.io/simple-javascript-app/" target="_blank">Link to Project 1</a>
-          </p>
-        </div>
-        <div class="project-list__item">
-          <h2>To Do List App</h2>
-          <p>
-            To Do List App using JQuery with the ability to add, crossout, reorder, and delete items.<br>
-            <a href="https://joshmou95.github.io/to-do-list-app/" target="_blank">Link to Project 2</a>
-          </p>
-        </div>
-        <div class="project-list__item">
-          <h2>Rest API</h2>
-          <p>
-            RESTful API using the Node.js, Express, and Mongoose with CRUD functionalities. <br>
-            <a href="https://github.com/joshmou95/movie_api" target="_blank">Link to Project 3</a>
-          </p>
-        </div>
-        <!-- <div class="project-list__item">
-          <h2>Project 4</h2>
-          <p>
-            Description of Project 4<br>
-            <a href="#">Link to Project 4</a>
-          </p>
-        </div>
-        <div class="project-list__item">
-          <h2>Project 5</h2>
-          <p>
-            Description of Project 5<br>
-            <a href="#">Link to Project 5</a>
-          </p>
-        </div>
-        <div class="project-list__item">
-          <h2>Project 6</h2>
-          <p>
-            Description of Project 6<br>
-            <a href="#">Link to Project 6</a>
-          </p>
-        </div> -->
+
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">MyFlix Angular App</h2>
+					<div class="image-container">
+						<img src="/img/angular-app.png" class="project-photo">
+						<a href="https://joshmou95.github.io/myFlix-Angular-client/" target="_blank" class="overlay">
+							<p class="project-text">Client-side Angular app using the RESTful Movie Api. Designed with Angular Material.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">Chat App</h2>
+					<div class="image-container">
+						<img src="/img/chat-app.png" class="project-photo">
+						<a href="https://github.com/joshmou95/chat-app/" target="_blank" class="overlay">
+							<p class="project-text">Mobile chat app written in React Native using Expo. Chats are stored in a google Firestore database and users login using Firebase authentication.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">Meet App</h2>
+					<div class="image-container">
+						<img src="/img/meet-app.png" class="project-photo">
+						<a href="https://joshmou95.github.io/Meet-App/" target="_blank" class="overlay" >
+							<p class="project-text">A serverless, progressive web app with React using a test-driven development technique. It the Google Calendar API to fetch upcoming events.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">MyFlix React App</h2>
+					<div class="image-container">
+						<img src="/img/react-app.png" class="project-photo">
+						<a href="https://myflixmcu.netlify.app/" target="_blank" class="overlay" >
+							<p class="project-text">Client-side app built with React, Redux, and bootstrap using the RESTful Movie API.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">RESTful Movie API</h2>
+					<div class="image-container">
+						<img src="/img/movie-api.png" class="project-photo">
+						<a href="https://github.com/joshmou95/movie_api" target="_blank" class="overlay">
+							<p class="project-text">REST API and database built using JavaScript, Node.js, Express, and MongoDB.</p>
+						</a>
+				</div>
+			</figure>
+
+			<figure class="project-list__item">
+				<h2 class="project-list__text">Pokedex js App</h2>
+					<div class="image-container">
+						<img src="/img/pokedex.png" class="project-photo">
+						<a href="https://joshmou95.github.io/simple-javascript-app/" target="_blank" class="overlay">
+							<p class="project-text">A simple app built with HTML, CSS, and JavaScript which uses an external Pokemon API.</p>
+						</a>
+				</div>
+			</figure>
+
       </div>
+			<p>
+				<br>
+			<a href="case-study.html">
+				<button type="button">myFlix API and React App Case Study</button>
+			</a>
+			<br>
+			</p>
+			<a href="/files/Joshua_Mouton_Resume.pdf" download>
+				<button type="button">Download Resume</button>
+			</a>
 		</section>
 		<section id="contact" class="contact">
-			<h1>Contact</h1>
-			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites"><h3>Contact: info@joshuamouton.net</h3></a><br>
+			<h1>Contact:</h1>
+			<form class="contact-form" method="post" action="mailer.php">
+				<label class="standard-label" for="yourName">Name * </label>
+				<div>
+					<input 
+						type="text"
+						class="form-control"
+						name="name" 
+						id="yourName" 
+						placeholder="Your name"
+						value=""
+						required>
+				</div>
+				<label class="standard-label" for="email">Email * </label>
+				<div>
+					<input 
+						type="email"
+						class="form-control"
+						name="email" 
+						id="email" 
+						placeholder="Your email"
+						value=""
+						required>
+				</div>
+				<!-- <input type="hidden" name="_subject" value="New message"> -->
+				<label class="standard-label" for="message">Message * </label>
+				<br>
+				<textarea
+				  id="message"
+					class="form-control"
+					maxlength="240" 
+					rows="8"
+					cols="35" 
+					placeholder="Your message"
+					name="message"
+					required>
+				</textarea>
+				<br>
+				<button 
+					id="submit"
+					type="submit" 
+					name="send" 
+					onclick="sendContact();"
+					value="SEND">Send Message</button>
+				<br>
+			</form>
+			<h3>Email me:</h3>
+			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites">info@joshuamouton.net</a>
+
+
+
 		</section>
 
 	</main>
@@ -134,6 +267,8 @@
 		</div>
 	</footer>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 
 </body>
 
