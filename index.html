@@ -197,11 +197,24 @@
 		</section>
 		<section id="contact" class="contact">
 			<h1>Contact:</h1>
-			<form class="contact-form" method="post" action="mailer.php">
+      <div class="container-out">
+        <div class="container-in">
+          <div class="contact-form">
+            <p>Name</p>
+            <input type="text" id="contact-name" />
+            <p>Email</p>
+            <input type="email" id="contact-email" />
+            <p>Message</p>
+            <textarea id="contact-message"></textarea>
+            <button id="send">Send</button>
+          </div>
+        </div>
+      </div>
+
+			<!-- <form class="contact-form" method="post" action="mailer.php">
 				<label class="standard-label" for="yourName">Name * </label>
 				<div>
-					<input 
-						type="text"
+					<input type="text"
 						class="form-control"
 						name="name" 
 						id="yourName" 
@@ -211,8 +224,7 @@
 				</div>
 				<label class="standard-label" for="email">Email * </label>
 				<div>
-					<input 
-						type="email"
+					<input type="email"
 						class="form-control"
 						name="email" 
 						id="email" 
@@ -220,7 +232,6 @@
 						value=""
 						required>
 				</div>
-				<!-- <input type="hidden" name="_subject" value="New message"> -->
 				<label class="standard-label" for="message">Message * </label>
 				<br>
 				<textarea
@@ -241,7 +252,7 @@
 					onclick="sendContact();"
 					value="SEND">Send Message</button>
 				<br>
-			</form>
+			</form> -->
 			<h3>Email me:</h3>
 			<a href="mailto:info@joshuamouton.net?subject=Web%20Development%20Opportunites">info@joshuamouton.net</a>
 
