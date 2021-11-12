@@ -1,34 +1,39 @@
 
-document.getElementById("send").addEventListener("click", validateForm);
-function validateForm() {
-  //gets the name
-  let name = document.getElementById("contact-name").value;
-  //gets the email
-  let email = document.getElementById("contact-email").value;
-  //gets the message
-  let message = document.getElementById("contact-message").value;
 
-  //checks if all fields have been filled before sending message.
-  if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
-    alert("all fields must be filled");
-  } else {
-    sendMessage(name, email, message);
-  }
+
+// Reference messages collection
+var messagesRef = database().ref("messages");
+
+// listen for form submit
+document.getElementById('contact-form').addEventListener('submit', submitForm);
+
+// submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // get values
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+  var message = getInputVal('message');
+
+  // save message
+  saveMessage(name, email, message);
 }
 
-//sends information to firebase
-function sendMessage(name, email, message) {
-  //sends the name, email and message by passing them as url parameters
-  window.location.href =
-    "https://us-central1-contact-form-db4a4.cloudfunctions.net/sendMail" +
-    name +
-    "&email=" +
-    email +
-    "&message=" +
-    message +
-    "";
+// function to get form value
+function getInputVal(id){
+  return document.getElementById(id).value;
 }
 
+// Save message to Firebase
+function saveMessage(name, email, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name, 
+    email: email,
+    message: message
+  });
+}
 
 // var fields = {};
 
