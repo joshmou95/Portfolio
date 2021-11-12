@@ -7,6 +7,7 @@
 	<title>Home</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -199,15 +200,28 @@
 			<h1>Contact:</h1>
       <div class="container-out">
         <div class="container-in">
-          <div class="contact-form">
+          <form 
+						class="contact-form" 
+						id="contact-form">
             <p>Name</p>
-            <input type="text" id="contact-name" />
+            <input 
+							type="text" 
+							id="name" 
+							name="name" 
+							required />
             <p>Email</p>
-            <input type="email" id="contact-email" />
+            <input 
+							type="email" 
+							id="email" 
+							name="email" 
+							required />
             <p>Message</p>
-            <textarea id="contact-message"></textarea>
-            <button id="send">Send</button>
-          </div>
+            <textarea 
+							id="message" 
+							name="message" 
+							required></textarea>
+            <button id="send" type="submit">Send Message</button>
+          </form>
         </div>
       </div>
 
@@ -277,7 +291,8 @@
 		</a>	
 		</div>
 	</footer>
-	
+	<!-- <script src="https://www.gstatic.com/firebasejs/9.4.1/firebase-app.js"></script> -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="js/script.js"></script>
 
