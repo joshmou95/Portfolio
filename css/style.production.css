@@ -24,6 +24,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 150px;
+  margin: -150px 0 0;
 }
 
 body {
@@ -65,12 +73,14 @@ a:visited {
 
 a:hover,
 a:focus {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #465EC1;
 }
 
 a:active {
   color: var(--active-color);
 }
+
 
 /* ----------------------- Header ----------------------- */
 .page-header {
@@ -135,7 +145,7 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 6rem 1rem;
   background-image:
     -webkit-gradient(linear, left top, right top, from(rgba(48, 48, 48, 0.3)), to(rgba(48, 48, 48, 0.7))),
@@ -189,13 +199,6 @@ a:active {
           animation-duration: 2s;
 }
 
-#home::before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin: -100px 0 0;
-}
-
 /* ------------------- About Section ----------------------- */
 .about {
   display: -webkit-box;
@@ -246,17 +249,21 @@ a:active {
 
 .skill:before{
   width: 100%;
-  height: 5px;
+  height: 6px;
   content: "";
   display: block;
   position: absolute;
-  background: var(--project-color);
+  background: #8A8A8A;
   bottom: 0;
+}
+
+.skill-header {
+  color: var(--background-color);
 }
 
 .skill-bar {
   width: 100%;
-  height: 5px;
+  height: 6px;
   background: var(--link-color);
   display: block;
   position: relative;
@@ -285,29 +292,30 @@ a:active {
 /* SKILL 1 */
 .skill1 {
   width: 90%;
+  right: 0;
 }
 
 /* SKILL 2 */
 .skill2 {
-  width: 80%;
+  width: 83%;
   right: 0;
 }
 
 /* SKILL 3 */
 .skill3 {
-  width: 75%;
+  width: 78%;
   right: 0;
 }
 
 /* SKILL 4 */
 .skill4 {
-  width: 60%;
+  width: 73%;
   right: 0;
 }
 
 /* SKILL 5 */
 .skill5 {
-  width: 70%;
+  width: 68%;
   right: 0;
 }
 
@@ -317,13 +325,12 @@ a:active {
   right: 0;
 }
 
-
 /* ---------------- Work Section -------------------- */
 .work {
   text-align: center;
-  margin: 3rem auto;
+  margin: 4rem auto;
   max-width: 1200px;
-  padding: 1rem 2rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .work-header {
@@ -334,6 +341,9 @@ a:active {
 .project-list__item {
   display: inline-block;
   width: 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .image-container {
@@ -360,7 +370,7 @@ a:active {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 98%;
   width: 100%;
   opacity: 0;
   -webkit-transition: 0.4s ease;
@@ -409,13 +419,6 @@ a:active {
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-#work::before {
-  content: "";
-  display: block;
-  height: 150px;
-  margin: -150px 0 0;
 }
 
 /* ------------------- Case Study ----------------- */
@@ -492,17 +495,58 @@ a:active {
   text-align: center;
   width: 95%;
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 4rem auto;
   padding: 6rem 1rem 1rem;
   border-top: 2px solid var(--project-color);;
 }
 
-#contact::before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin: -100px 0 0;
+.container-out {
+  padding: 15px 0; /* adds padding at the top and bottom of the outer container */
+  max-width: 400px; /* gives the outer container a maximum width of 400px */
+  margin: 0 auto; /*centers the outer container in the middle of the body */
 }
+
+.container-in {
+  padding: 30px 0; /* adds padding at the top and bottom of the inner container */
+  width: 95%; /* width of inner container equals 95% of the outer container */
+  margin: 0 auto; /*centers the outer container in the middle of the outer container */
+  background: var(--project-color); /* gives the inner container a background color */
+  border-radius: 5px; /* curves the edges of the inner container by 5px */
+}
+
+.contact-form {
+  width: 85%; /* width of inner container equals 85% of the inner container */
+  margin: 0 auto; /*centers the outer container in the middle of the inner container */
+}
+
+.contact-form p {
+  margin: 0; /* removes all margins from the p tags */
+  margin: 5px 0; /* add 5px margin at the top and bottom of the p tags */
+  color: var(--background-color); /* changes the text color of the p tag to white */
+}
+
+.contact-form input {
+  border: none; /* removes the border on the input */
+  width: 100%; /* makes the input width same as the contact-form div*/
+  margin-bottom: 15px; /* adds margin at the bottom of the input */
+  padding: 10px; /* adds 10px padding to all sides of the input */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* prevents the input from overflowing out of the parent div */
+  border-radius: 3px; /* curves the edges of the input by 3px */
+}
+
+.contact-form textarea {
+  width: 100%; /* makes the textarea width same as the contact-form div */
+  padding: 10px; /*  adds 10px padding to all sides of the input */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* prevents the input from overflowing out of the parent div */
+  border-radius: 3px; /* curves the edges of the input by 3px */
+  min-height: 120px; /* gives the text-area a minimum height of 120px */
+  margin-bottom: 15px; /* adds margin at the bottom of the textarea */
+  resize: vertical; /* limits resizing to vertical resizing */
+}
+
+
 
 /* ---------------- Footer -------------- */
 .page-footer {
@@ -522,37 +566,41 @@ a:active {
 }
 
 .social-media__anchor,
-.social-media__anchor:hover,
 .social-media__anchor:visited,
 .social-media__anchor:active {
   color: var(--background-color);
 }
 
+.social-media__anchor:hover {
+  color: var(--background-color);
+  opacity: 0.8;
+}
+
 /* -------------- Buttons ----------------- */
 button,
 .button {
-  background-color: var(--link-color);
-  border: 1px solid var(--main-color);;
+  border: none;
   font-family: inherit;
-  color: #fff;
-  padding: 1rem;
+  color: var(--background-color);
+  background-color: var(--link-color);
+  padding: 0.75rem;
   text-decoration: none;
   display: inline-block;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 7px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.02s opacity;
   -o-transition: 0.02s opacity;
   transition: 0.02s opacity;
+  cursor: pointer;
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  cursor: pointer;
-  opacity: 0.8;
+  /* opacity: 0.9; */
+  background-color: #465EC1;
 }
 
 /* ---------------- Media Queries ------------ */
