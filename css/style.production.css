@@ -193,8 +193,8 @@ a:active {
 }
 
 .web-text:hover {
-  -webkit-animation: bouneIn;
-          animation: bouneIn;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
@@ -212,6 +212,10 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 3rem;
   font-size: 20px;
   width: 95%;
   max-width: 1200px;
@@ -224,13 +228,26 @@ a:active {
 .about__item {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  padding: 0;
-  max-width: 45%;
+  padding: 0 2rem;
+  max-width: 50%;
+}
+
+.about-header {
   text-align: center;
 }
 
+.about__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 3rem;
+  max-width: 100%;
+}
+/* ----------------Skill Bar ----------------
 .wrapper {
-  /* width: 400px; */
   margin: 0 auto;
 }
 
@@ -242,7 +259,6 @@ a:active {
 
 .skill > p {
   font-size: 18px;
-  /* font-weight: 700; */
   margin: 0;
   text-align: left;
 }
@@ -270,10 +286,8 @@ a:active {
 }
 
 .skill-bar:hover {
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  animation: fadeIn;
+  animation-duration: 1.5s;
 }
 
 .skill-bar span{
@@ -289,48 +303,43 @@ a:active {
   right: 0;
 }
 
-/* SKILL 1 */
 .skill1 {
   width: 90%;
   right: 0;
 }
 
-/* SKILL 2 */
 .skill2 {
   width: 83%;
   right: 0;
 }
 
-/* SKILL 3 */
 .skill3 {
   width: 78%;
   right: 0;
 }
 
-/* SKILL 4 */
 .skill4 {
   width: 73%;
   right: 0;
 }
 
-/* SKILL 5 */
 .skill5 {
   width: 68%;
   right: 0;
 }
 
-/* SKILL 6 */
 .skill6 {
   width: 60%;
   right: 0;
 }
+Skill bar END --------------------*/
 
 /* ---------------- Work Section -------------------- */
 .work {
   text-align: center;
   margin: 4rem auto;
-  max-width: 1200px;
-  padding: 3rem 4rem;
+  max-width: 1250px;
+  padding: 3rem 0.5rem;
 }
 
 .work-header {
@@ -378,6 +387,7 @@ a:active {
   transition: 0.4s ease;
   background-color: #132779c9;
   border-radius: 0.5rem;
+
 }
 
 .project-text {
@@ -394,6 +404,7 @@ a:active {
 
 .image-container:hover .overlay {
   opacity: 1;
+  text-decoration: none;
 }
 
 .project-list__item {
@@ -405,15 +416,19 @@ a:active {
   border-radius: 0.5rem;
 }
 
+.resume {
+  margin-top: 5rem;
+}
+
 /* end grid fallback */
 
 @supports (display: grid) {
   .project-list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: minmax(10px, 1fr) 2rem minmax(10px, 1fr) 2rem minmax(10px, 1fr);
+    -ms-grid-columns: minmax(10px, 1fr) 2.5rem minmax(10px, 1fr) 2.5rem minmax(10px, 1fr);
     grid-template-columns: repeat(3, minmax(10px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 2.5rem;
     margin: 15px 25px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -471,6 +486,13 @@ a:active {
 
 .cs-image-5 {
   max-width: 500px;
+}
+
+.cs-image-6 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 85%;
 }
 
 .cs-wrap {
@@ -572,7 +594,7 @@ a:active {
 
 .social-media__anchor:hover {
   color: var(--background-color);
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* -------------- Buttons ----------------- */
@@ -604,11 +626,11 @@ button:focus,
   border: none;
   font-family: inherit;
   color: var(--background-color);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   display: inline-block;
-  margin: 0 auto;
-  font-size: 18px;
+  margin: 2px 2px;
+  font-size: 20px;
   border-radius: 7px;
 }
 
@@ -644,11 +666,12 @@ button:focus,
   .about__item {
     margin: 5px;
     padding: 5px;
+    text-align: center;
   }
 
   .work {
     margin: 1rem auto;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0;
   }
 
   .project-list {
@@ -718,6 +741,22 @@ button:focus,
     padding: 3rem 2rem;
   }
 
+  .about {
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .about__item {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .about__skills {
+    gap: 1rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .work {
     margin: 2rem auto;
     padding: 3rem 2rem;
@@ -731,18 +770,28 @@ button:focus,
     grid-template-columns: 1fr 1fr;
   }
 
-  .about__item {
-    max-width: 85%;
-  }
-
   .profile__text {
     margin: 25px 10px 10px 10px;
   }
+
+  .about {
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .about__item {
+    max-width: 568px;
+  }
+
+  .about__skills {
+    gap: 8rem;
+  }
+
 }
 
 @media all and (max-width: 768px) {
   .project-list {
-    grid-gap: 10px;
+    grid-gap: 1.5rem;
   }
 
   .profile__portrait {
@@ -756,11 +805,7 @@ button:focus,
   }
 
   h1 {
-    font-size: 22px;
-  }
-
-  .about__item {
-    max-width: 95%;
+    font-size: 28px;
   }
 
   .cs-text {
@@ -791,6 +836,13 @@ button:focus,
   
   .cs-image-5 {
     max-width: 99%;
+  }
+
+  .cs-image-6 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 95%;
   }
 
 }
