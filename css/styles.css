@@ -59,13 +59,13 @@ a {
   text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
   color: var(--visited-color);
-}
+} */
 
 a:hover,
 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
   color: #465EC1;
 }
 
@@ -431,49 +431,48 @@ a:active {
 }
 
 .container-out {
-  padding: 15px 0; /* adds padding at the top and bottom of the outer container */
-  max-width: 400px; /* gives the outer container a maximum width of 400px */
-  margin: 0 auto; /*centers the outer container in the middle of the body */
+  padding: 15px 0; 
+  max-width: 400px; 
+  margin: 0 auto; 
 }
 
 .container-in {
-  padding: 30px 0; /* adds padding at the top and bottom of the inner container */
-  width: 95%; /* width of inner container equals 95% of the outer container */
-  margin: 0 auto; /*centers the outer container in the middle of the outer container */
-  background: var(--project-color); /* gives the inner container a background color */
-  border-radius: 5px; /* curves the edges of the inner container by 5px */
+  padding: 30px 0;
+  width: 95%; 
+  margin: 0 auto; 
+  background: var(--project-color); 
+  border-radius: 5px; 
 }
 
 .contact-form {
-  width: 85%; /* width of inner container equals 85% of the inner container */
-  margin: 0 auto; /*centers the outer container in the middle of the inner container */
+  width: 85%; 
+  margin: 0 auto; 
 }
 
 .contact-form p {
-  margin: 0; /* removes all margins from the p tags */
-  margin: 5px 0; /* add 5px margin at the top and bottom of the p tags */
-  color: var(--background-color); /* changes the text color of the p tag to white */
+  margin: 0; 
+  margin: 5px 0; 
+  color: var(--background-color); 
 }
 
 .contact-form input {
-  border: none; /* removes the border on the input */
-  width: 100%; /* makes the input width same as the contact-form div*/
-  margin-bottom: 15px; /* adds margin at the bottom of the input */
-  padding: 10px; /* adds 10px padding to all sides of the input */
-  box-sizing: border-box; /* prevents the input from overflowing out of the parent div */
-  border-radius: 3px; /* curves the edges of the input by 3px */
+  border: none; 
+  width: 100%; 
+  margin-bottom: 15px; 
+  padding: 10px;
+  box-sizing: border-box; 
+  border-radius: 3px; 
 }
 
 .contact-form textarea {
-  width: 100%; /* makes the textarea width same as the contact-form div */
-  padding: 10px; /*  adds 10px padding to all sides of the input */
-  box-sizing: border-box; /* prevents the input from overflowing out of the parent div */
-  border-radius: 3px; /* curves the edges of the input by 3px */
-  min-height: 120px; /* gives the text-area a minimum height of 120px */
-  margin-bottom: 15px; /* adds margin at the bottom of the textarea */
-  resize: vertical; /* limits resizing to vertical resizing */
+  width: 100%; 
+  padding: 10px; 
+  box-sizing: border-box; 
+  border-radius: 3px; 
+  min-height: 120px;
+  margin-bottom: 15px; 
+  resize: vertical; 
 }
-
 
 
 /* ---------------- Footer -------------- */
@@ -502,42 +501,67 @@ a:active {
 /* -------------- Buttons ----------------- */
 button,
 .button {
+  background-color: var(--link-color);
   border: none;
   font-family: inherit;
   color: var(--background-color);
-  background-color: var(--link-color);
-  padding: 0.75rem;
+  padding: 0.7rem;
   text-decoration: none;
   display: inline-block;
   margin: 0 auto;
   font-size: 18px;
   border-radius: 7px;
-  transition: 0.02s opacity;
-  cursor: pointer;
 }
 
 button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* opacity: 0.9; */
   background-color: #465EC1;
+  cursor: pointer;
+
+}
+
+.project-button {
+  background-color: var(--link-color);
+  border: none;
+  font-family: inherit;
+  color: var(--background-color);
+  padding: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.project-button:hover,
+.project-button:focus {
+  background-color: #465EC1;
+  color: var(--background-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* ---------------- Media Queries ------------ */
 @media all and (max-width: 480px) {
+
+  html {
+    scroll-padding-top: 6rem;
+  }
+  
   .page-header {
     padding: 0.1rem 0.1rem;
   }
 
   .profile {
     margin: 1rem auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 
   .about {
-    margin: 1rem auto;
-    padding: 0 1rem;
+    margin: 4rem auto;
+    padding: 6rem 2rem;
   }
 
   .about__item {
@@ -547,7 +571,7 @@ button:focus,
 
   .work {
     margin: 1rem auto;
-    padding: 0 0.5rem;
+    padding: 1rem 0.5rem;
   }
 
   .project-list {
@@ -557,11 +581,11 @@ button:focus,
 
   .contact {
     margin: 1rem auto;
-    padding: 2rem 1rem 0;
+    padding: 4rem 1rem 0;
   }
-
-  .social-media {
-    margin: 0 1rem 2rem;
+  
+  .page-footer {
+    padding: 2rem 1rem;
   }
 
 }
@@ -582,11 +606,13 @@ button:focus,
   }
 
   .navigation-list {
+    text-align: center;
     list-style-type: none;
   }
 
   .navigation-list li {
     display: inline-block;
+    padding: 2px;
   }
 
   .navigation-list__item--active {
@@ -608,9 +634,15 @@ button:focus,
   }
 
   .about {
-    width: 95%;
-    margin: 10px;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
   }
+
+  .work {
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+  }
+
 }
 
 @media all and (min-width: 576px) and (max-width: 1024px) {
